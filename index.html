@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="estilo.css">
+    <!--<script type="text/javascript"src="http://code.jquery.com/jquery.js"></script>-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+<script>
+        $(document).ready(function(){
+            /* efecto para los botones del menú principal */
+            $('#p1').click(function(){
+                $('#contenido').load("inicio.html");
+            });
+            $('#p2').click(function(){
+                $('#contenido').load("nosotros.html");
+            });
+            $('#p3').click(function(){
+                $('#contenido').load("galeria(1).html");
+            });
+
+            /* efecto para los botones de novedades */
+            $('#p11').click(function(){
+                $('#contenido').load("asercade.html");
+            });
+            $('#p22').click(function(){
+                $('#contenido').load("pantalones.html");
+            });
+            $('#p33').click(function(){
+                $('#contenido').load("casacas.html");
+            });
+            $('#p44').click(function(){
+                $('#contenido').load("poleras.html");
+            });
+            $('#p55').click(function(){
+                $('#contenido').load("polos.html");
+            });
+            $('#p66').click(function(){
+                $('#contenido').load("chompas.html");
+            });
+            $('#p77').click(function(){
+                $('#contenido').load("otros.html");
+            });
+        });
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <header class="cabeza flex modificador">
+        <img src="imagen2.png" alt="logo">
+        <h2>LO MEJOR DE LAS MODAS</h2>
+    </header>
+    <div class="modificador">
+        <nav class="menu">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a href="#" id="p1">INICIO</a></li>
+                <li><a href="#" id="p2">NOSOTROS</a></li>
+                <li><a href="#" id="p3">GALERIA</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main class="contenido flex modificador">
+        <section class="noticia" id="contenido">
+            <h2>CONTENIDO</h2>
+        </section>
+        <aside class="novedades">
+            <h2>NOVEDADES</h2>
+            <ul>
+                <li><a href="#" id="p11">ASERCA DE NOSOTROS</a></li>
+                <li><a href="#" id="p22">PANTALONES</a></li>
+                <li><a href="#" id="p33">CASACAS</a></li>
+                <li><a href="#" id="p44">POLERAS</a></li>
+                <li><a href="#" id="p55">POLOS</a></li>
+                <li><a href="#" id="p66">CHOMPAS</a></li>
+                <li><a href="#" id="p77">OTROS</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer class="pie">
+        <h2>DERECHOS RESERVADOS</h2>
+    </footer>
+</body>
+</html>
+
+
+

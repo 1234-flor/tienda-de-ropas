@@ -1,0 +1,78 @@
+.menu{
+    background: #043d5e;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.menu ul{
+    float: right;
+    margin-right: 20px;
+}
+.menu ul li{
+    display: inline-block;
+    line-height: 80px;/*ancho de parrafo*/
+    margin: 0 5px;
+}
+.menu ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none; /*para quitar los puntos*/
+}
+.menu li a.active, .menu li a:hover{
+    background: #000090;
+    transition: .5s;
+}
+.checkbtn{/*estilo del icono responsive*/
+    font-size: 30px;
+    color: #fff;
+    float: right;/*tipo flotante*/
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;/*es la que se pone la manito mause*/
+    display: none;
+}
+#check{
+    display: none;/*cuando le achicas no ay nada*/
+}
+/*variacion de acuerdo al tamaño de pantallas*/
+@media (max-width: 952px){
+    
+    .menu ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 700px){
+    .checkbtn{
+        display: block;/*aparesera en bloques*/
+    }
+   .menu ul{
+        position: fixed; /*posicion adaptable*/
+        width: 80%;
+        height: 90vh;/*profundidad del menu*/
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;/*ase los movimentos ambos lados se sale del cuadro lo forzamos*/
+        text-align: center;
+        transition: all .5s;
+    }
+    .menu ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .menu nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
